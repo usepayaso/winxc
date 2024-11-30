@@ -21,9 +21,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          TELEGRAM_BOT_TOKEN: 7172433067:AAHROgYtz_Ws3QhYAlnf0EKC2-ouyv5d9b8
-          TELEGRAM_CHANNEL_ID: 5490159328
-          VITE_BOT_USERNAME: winzcash_bot
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          VITE_BOT_USERNAME: ${{ secrets.VITE_BOT_USERNAME }}
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
